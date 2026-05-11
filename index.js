@@ -13,7 +13,7 @@ import permissions from './lib/permissions.js';
 import datasafety from './lib/datasafety.js';
 import categories from './lib/categories.js';
 
-import requests from './lib/utils/request.js';
+import request from './lib/utils/request.js';
 
 const methods = {
   app: appMethod,
