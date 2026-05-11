@@ -13,6 +13,8 @@ import permissions from './lib/permissions.js';
 import datasafety from './lib/datasafety.js';
 import categories from './lib/categories.js';
 
+import requests from './lib/utils/request.js';
+
 const methods = {
   app: appMethod,
   list,
@@ -23,7 +25,8 @@ const methods = {
   similar,
   permissions,
   datasafety,
-  categories
+  categories,
+  request
 };
 
 function memoized (opts) {
@@ -47,7 +50,8 @@ function memoized (opts) {
     similar,
     permissions,
     datasafety,
-    categories
+    categories,
+    request
   };
 
   return Object.assign({ app: mAppMethod },
