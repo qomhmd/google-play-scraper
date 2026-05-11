@@ -198,7 +198,8 @@ describe('App method', () => {
   it('should fetch PriceText for paid apps properly', () => {
     return gplay.app({ appId: 'com.teslacoilsw.launcher.prime', country: 'in' })
       .then((app) => {
-        assert.equal(app.priceText, `₹${app.price.toLocaleString('en-US', {minimumFractionDigits:2, maximumFractionDigits:2})}`);
+        const right_hand = app.price.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })
+        assert.equal(app.priceText, `₹${}`);
         assert.equal(app.currency, 'INR');
       });
   });
