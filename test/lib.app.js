@@ -199,7 +199,7 @@ describe('App method', () => {
     return gplay.app({ appId: 'com.teslacoilsw.launcher.prime', country: 'in' })
       .then((app) => {
         const right_hand = app.price.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })
-        assert.equal(app.priceText, `₹${}`);
+        assert.equal(app.priceText, `₹${right_hand}`);
         assert.equal(app.currency, 'INR');
       });
   });
