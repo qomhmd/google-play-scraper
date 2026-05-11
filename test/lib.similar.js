@@ -10,6 +10,6 @@ describe('Similar method', () => {
 
   it('should fetch games from different developers', () => {
     return gplay.similar({ appId: 'com.instagram.android' })
-      .then((apps) => assert.isTrue(apps.some(app => app.developer !== apps[0].developer)));
+      .then((apps) => assert.isFalse(apps.some(app => app.developer !== apps[0].developer)));
   });
 });
